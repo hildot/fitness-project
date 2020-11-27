@@ -3,11 +3,7 @@ title: "Exploratory Data Analysis of Hilary's Running Data (12/2016-11/2020)"
 author: "Hilary M. Dotson"
 date: "11/27/2020"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
-    number_sections: true
-    code_folding: hide
+  rmarkdown::github_document
   
 ---
 
@@ -96,9 +92,7 @@ distance_running <- summary(garmin_data$distance)
 # Column bind to present together
 td_running <- cbind(time_running, distance_running, pace_running)
 
-# Kable formatted table because it looks nicer than straight output
-kableExtra::kable(td_running) %>%
-  kableExtra::kable_minimal(full_width = FALSE)
+td_running
 
 ```
 
@@ -194,8 +188,7 @@ nrow_2019 <- nrow(garmin_2019)
 nrow_2020 <- nrow(garmin_2020)
 nrow_all <- cbind(nrow_2016, nrow_2017, nrow_2018, nrow_2019, nrow_2020)
 
-kableExtra::kable(nrow_all) %>%
-  kableExtra::kable_minimal(full_width = FALSE)
+nrow_all
 ```
 
 I only completed ```nrow(garmin_2016)``` runs in 2016---that's actually not true, but it's all I have tracked.  I didn't own a Garmin until December 2016, so very few of my runs were actually tracked.  That said, most of 2016 I was just completing the Couch to 5K program so a lot more "run/walking" than actually running.  By the time December hit, I had already completed both a 5K and 10K race---so I was consistently "running."
@@ -212,8 +205,7 @@ pace_2020 <- summary(garmin_2020$avg_pace)
 
 pace_sum <- cbind(pace_2016, pace_2017, pace_2018, pace_2019, pace_2020)
 
-kableExtra::kable(pace_sum) %>%
-  kableExtra::kable_minimal(full_width = FALSE)
+pace_sum
 
 ```
 
