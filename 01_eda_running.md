@@ -147,8 +147,8 @@ str(garmin_data)
 # Quick Summary Statistics
 
 Now, let’s take a look at some key running statistics. In particular,
-for the `nrow(garmin_data)` runs I did, let’s take a look at how long I
-was out there, my average pace, and my distance.
+for the 455 runs I did, let’s take a look at how long I was out there,
+my average pace, and my distance.
 
 ``` r
 # Calculate summary statistics
@@ -191,7 +191,7 @@ garmin_data %>%
   ggplot2::theme_minimal()
 ```
 
-![](01_eda_running_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](01_eda_running_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 You’ll notice that nearly all of my runs are under two hours—not at all
 surprising given the summary statistics shown above. But what happened
@@ -234,8 +234,8 @@ garmin_data$short_time <- lubridate::as.period(garmin_data$short_time)
 ```
 
 Next, for good measure, let’s take a quick look at the summary
-statistics for the `!is.na(nrows(garmin_data))` runs I completed which
-were less than 2H 30M in duration.
+statistics for the 451 runs I completed which were less than 2H 30M in
+duration.
 
 ``` r
 garmin_data %>%
@@ -249,7 +249,7 @@ garmin_data %>%
   ggplot2::theme_minimal()
 ```
 
-![](01_eda_running_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](01_eda_running_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 You get a much clearer picture of what my “typical” runs actually look
 like in terms of the amount of time I spent out there running. But has
@@ -298,13 +298,12 @@ nrow_all
     ##      nrow_2016 nrow_2017 nrow_2018 nrow_2019 nrow_2020
     ## [1,]         6       138       141       103        67
 
-I only completed `nrow(garmin_2016)` runs in 2016—that’s actually not
-true, but it’s all I have tracked. I didn’t own a Garmin until December
-2016, so very few of my runs were actually tracked. That said, most of
-2016 I was just completing the Couch to 5K program so a lot more
-“run/walking” than actually running. By the time December hit, I had
-already completed both a 5K and 10K race—so I was consistently
-“running.”
+I only completed 455 runs in 2016—that’s actually not true, but it’s all
+I have tracked. I didn’t own a Garmin until December 2016, so very few
+of my runs were actually tracked. That said, most of 2016 I was just
+completing the Couch to 5K program so a lot more “run/walking” than
+actually running. By the time December hit, I had already completed both
+a 5K and 10K race—so I was consistently “running.”
 
 From here, let’s check out my pace over time.
 
@@ -350,7 +349,7 @@ garmin_data %>%
   ggplot2::theme_minimal()
 ```
 
-![](01_eda_running_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](01_eda_running_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 Okay, cool\! Pretty clearly became faster over time… until late 2020.
 What happened? The short answer is I had multiple injuries in late 2019
@@ -369,8 +368,7 @@ As I did with the tables earlier, let’s take a look at the distance
 against the time I spent running. First, let’s examine the correlation.
 For this, we’ll use the time\_numeric variable from the garmin\_data
 data.frame, which represents the time, in seconds, I spent running
-during each run. The Pearson’s R is `round(cor(garmin_data$time_numeric,
-garmin_data$distance), digits = 2)`—indicating a very strong and
+during each run. The Pearson’s R is 0.99—indicating a very strong and
 positive relationship between the time I spent running and the distance
 I ran. That’s a relief\! That said, from the previous analyses, we know
 there were some blips…
@@ -389,7 +387,7 @@ garmin_data %>%
   ggplot2::theme_minimal()
 ```
 
-![](01_eda_running_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](01_eda_running_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 Shocking – the longer runs took more time\!
 
