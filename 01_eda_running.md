@@ -298,9 +298,9 @@ nrow_all
     ##      nrow_2016 nrow_2017 nrow_2018 nrow_2019 nrow_2020
     ## [1,]         6       138       141       103        67
 
-I only completed 455 runs in 2016—that’s actually not true, but it’s all
-I have tracked. I didn’t own a Garmin until December 2016, so very few
-of my runs were actually tracked. That said, most of 2016 I was just
+I only completed 6 runs in 2016—that’s actually not true, but it’s all I
+have tracked. I didn’t own a Garmin until December 2016, so very few of
+my runs were actually tracked. That said, most of 2016 I was just
 completing the Couch to 5K program so a lot more “run/walking” than
 actually running. By the time December hit, I had already completed both
 a 5K and 10K race—so I was consistently “running.”

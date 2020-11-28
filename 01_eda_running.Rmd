@@ -195,7 +195,7 @@ nrow_all <- cbind(nrow_2016, nrow_2017, nrow_2018, nrow_2019, nrow_2020)
 nrow_all
 ```
 
-I only completed `r n_runs` runs in 2016---that's actually not true, but it's all I have tracked.  I didn't own a Garmin until December 2016, so very few of my runs were actually tracked.  That said, most of 2016 I was just completing the Couch to 5K program so a lot more "run/walking" than actually running.  By the time December hit, I had already completed both a 5K and 10K race---so I was consistently "running."
+I only completed `r nrow_2016` runs in 2016---that's actually not true, but it's all I have tracked.  I didn't own a Garmin until December 2016, so very few of my runs were actually tracked.  That said, most of 2016 I was just completing the Couch to 5K program so a lot more "run/walking" than actually running.  By the time December hit, I had already completed both a 5K and 10K race---so I was consistently "running."
 
 From here, let's check out my pace over time. 
 
